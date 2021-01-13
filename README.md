@@ -1,7 +1,7 @@
 # UAM Simulator
 2D agent-based simulation to evaluate some alternatives for low-altitude unmanned air traffic management.  
 See *Ramee, C. and Mavris, D., "Development of a Framework to Compare Low-Altitude
-Unmanned Air Traffic Management Systems", AIAA SciTech 2021, 2021.* for more details.
+Unmanned Air Traffic Management Systems", AIAA SciTech 2021, 2021.* for more details.  
 The code is distributed under the MIT license. Please cite the above paper if using this code.
 ## Installation
 First clone the code.  
@@ -9,9 +9,9 @@ First clone the code.
 Navigate to the new UAM_simulator_scitech2021 folder. 
  
 ### Using Anaconda  
-To install the code dependencies in a new conda virtual environment: 
-`conda env create - f uam_simulator_env.yml`
-`conda activate uam_simulator_env`
+To install the code dependencies in a new conda virtual environment:  
+`conda env create - f uam_simulator_env.yml`  
+`conda activate uam_simulator_env`  
 
 ### Using pip
 When installing with pip, the gurobi library is called gurobipy. The setup.py file can be used to install dependecies by running: 
