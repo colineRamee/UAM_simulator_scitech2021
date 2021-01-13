@@ -12,7 +12,7 @@ class Simulation:
     def __init__(self, length, n_intruder, minimum_separation, max_speed,
                  time_step= 10, time_end=6000, n_valid_agents_for_simulation_end=None, sensing_radius=None,
                  simulation_type='reactive', simulation_name='test', algorithm_type='MVP',
-                 structure=None, demand=None,
+                 structure=None,
                  multiple_planning_agents=True,
                  log_type='short',save_file=True,
                  log_density=False, update_queue=None,stdout_to_file=False):
@@ -64,10 +64,10 @@ class Simulation:
             self.my_logger = MyLogger(simulation_name + '.txt')
         else:
             self.my_logger = MyLogger()
-        self.demand = demand
+        self.demand = None
         self.env = environment.Environment(length, minimum_separation, max_speed, self.sensing_radius, self.tolerance, utm_on,
                                            desired_number_of_agents=n_intruder, multiple_planning_agents=multiple_planning_agents,
-                                           structure=structure, demand=demand,
+                                           structure=structure,
                                            centralized_manager=self.centralized_manager, simulation_type=simulation_type,
                                            algo_type=algorithm_type, log_type=log_type, log_density=log_density,
                                            n_valid_agents_for_simulation_end=n_valid_agents_for_simulation_end, logger=self.my_logger)

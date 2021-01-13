@@ -520,19 +520,10 @@ class Environment:
         del self.active_agents[i]
         del self.active_agent_pos[i]
         if self.multiple_planning_agents:
-            if self.demand['type'] == 'hub_and_spoke' and a.flight_leg == 'initial':
-                start = a.goal
-                goal = a.start
-                flight_leg = 'return_to_base'
-                if self.simulation_type == 'reactive':
-                    self.add_reactive_agent(algo_type=self.algo_type, start_time=time, start=start, end=goal, flight_leg=flight_leg)
-                elif self.simulation_type == 'strategic':
-                    self.add_strategic_agent(algo_type=self.algo_type, start_time=time, density=density, start=start, end=goal, flight_leg=flight_leg)
-            else:
-                if self.simulation_type == 'reactive':
-                    self.add_reactive_agent(algo_type=self.algo_type, start_time=time)
-                elif self.simulation_type == 'strategic':
-                    self.add_strategic_agent(algo_type=self.algo_type, start_time=time, density=density)
+            if self.simulation_type == 'reactive':
+                self.add_reactive_agent(algo_type=self.algo_type, start_time=time)
+            elif self.simulation_type == 'strategic':
+                self.add_strategic_agent(algo_type=self.algo_type, start_time=time, density=density)
         else:
             if self.simulation_type == 'reactive':
                 self.add_random_agent(random_type='edge', start_time=time)

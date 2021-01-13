@@ -19,7 +19,7 @@ n_agent_results = 100  # See above
 
 n_intruder = 50  # Number of agents in the simulation (simulation starts at 0 agents and adds agent at a constant rate until n_intruder is achieved)
 simulation_type = 'reactive'  # set to 'reactive' (access control: free) or 'strategic' (access control: 4DT contract)
-algo_type = 'straight'  # For reactive: MVP_Bluesky, ORCA, straight. For strategic: Decoupled, LocalVO, SIPP
+algo_type = 'MVP_Bluesky'  # For reactive: MVP_Bluesky, ORCA, straight. For strategic: Decoupled, LocalVO, SIPP
 structure = None  # None or {'type': 'layer', 'parameters': [0, 180]}. The range for the layer is specified in degrees in parameters and can be set to any number
 
 visualization = True  # Turn visualization on or off. If visualization is on, the file must be saved in the simulation thread
